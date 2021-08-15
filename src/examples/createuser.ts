@@ -4,14 +4,14 @@
 
 import { encodeAddress } from '@polkadot/keyring';
 // import confidential_identity from '../../pkg/confidential_identity_wasm_bg.wasm';
-import { hexToU8a, stringToU8a,u8aToHex } from '@polkadot/util';
+import { hexToU8a, stringToU8a, u8aToHex } from '@polkadot/util';
 import confidential_identity from '@polymathnetwork/confidential-identity-nodejs';
 import { Polymesh } from '@polymathnetwork/polymesh-sdk';
 import { ClaimType, ScopeType } from '@polymathnetwork/polymesh-sdk/types';
 import BigNumber from 'bignumber.js';
 import crypto from 'crypto';
 import { sha512 } from 'js-sha512';
-import { stringify as uuidStringify,v4 as uuid } from 'uuid';
+import { stringify as uuidStringify, v4 as uuid } from 'uuid';
 
 // import { getClient } from '../Polymesh/index';
 import { getClient } from '~/common/client';
@@ -286,10 +286,10 @@ function createHexString(arr: number[]) {
       str.length == 0
         ? '00'
         : str.length == 1
-        ? '0' + str
-        : str.length == 2
-        ? str
-        : str.substring(str.length - 2, str.length);
+          ? '0' + str
+          : str.length == 2
+            ? str
+            : str.substring(str.length - 2, str.length);
     result += str;
   }
   return result;
